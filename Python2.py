@@ -1,7 +1,7 @@
  price_all = 0
 while True:
     try:
-        ticket_number = input('Сколько билетов вы хотите приобрести на мероприятие? ')
+        ticket_number = input('Сколько билетов вы хотите приобрести на мероприятие?')
         ticket_number = int(ticket_number)
         if type(ticket_number) == int:
             break
