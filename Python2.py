@@ -1,32 +1,32 @@
- price_all = 0
+price_all = 0
 while True:
     try:
-        ticket_number = input('Сколько билетов вы хотите приобрести на мероприятие?')
+        ticket_number = input('How many tickets do you need?')
         ticket_number = int(ticket_number)
         if type(ticket_number) == int:
             break
     except ValueError:
-        print('Введите целое число')
+        print('Type an integer number')
 for i in range(ticket_number):
     i += 1
     while True:
         try:
-            age_for_ticket = input(f'Для какого возраста билет №{i}? ')
+            age_for_ticket = input(f'How old are you {i}? ')
             age_for_ticket = int(age_for_ticket)
             if age_for_ticket < 18:
-                print('Билет бесплатный')
+                print('The ticket is free')
             elif 25 > age_for_ticket >= 18:
                 price_all += 990
-                print('Стоимость билета: 990 руб.')
+                print('Ticket price: 990 RUB.')
             else:
                 price_all += 1390
-                print('Стоимость билета: 1390 руб.')
+                print('Ticket price: 1390 RUB.')
             if type(age_for_ticket) == int:
                 break
         except ValueError:
-            print('Введите целое число')
+            print('Type an integer number')
 if ticket_number > 5:
     price_all = price_all - ((price_all / 100) * 20)
-    print(f'Сумма к оплате {price_all} руб. с учетом 20%-ой скидки на полную стоимость заказа за регистрацию больше 5-и человек')
+    print(f'sum is for payment {price_all} RUB. including a 20% discount on the total cost of the order for registration of 5 people')
 else:
-    print(f'Сумма к оплате {price_all} руб.')
+    print(f'sum is for payment {price_all} RUB.')
